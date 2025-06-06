@@ -8,4 +8,6 @@ public interface IVoterMgmtService {
 		public Voter registerVoter(Voter voter);
 		public List<Voter> getAllVoter();
 		public Voter getVoterById(Long id);
+		public Voter updateVoter(Long id,Voter updateVoter);
+		public void deleteVoter(Long id);
 }

@@ -1,5 +1,7 @@
 package in.votezy.entity;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
@@ -16,9 +18,11 @@ public class Vote {
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	private Long id;
 	@OneToOne
+	@JsonIgnore
 	@JoinColumn(name="voter_id",unique=true)
 	private Voter voter;
 	@ManyToOne
 	@JoinColumn(name="candidate_id")
+	@JsonIgnore
 	private Candidate candidate;
 }

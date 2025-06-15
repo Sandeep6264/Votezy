@@ -1,6 +1,7 @@
 package in.votezy.entity;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -25,4 +26,12 @@ public class Vote {
 	@JoinColumn(name="candidate_id")
 	@JsonIgnore
 	private Candidate candidate;
+	@JsonProperty
+	public Long getVoterId() {
+		return voter!=null?voter.getId():null;
+	}
+	@JsonProperty
+	public Long getCandidateId() {
+		return candidate!=null?candidate.getId():null;
+	}
 }

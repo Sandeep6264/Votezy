@@ -44,7 +44,7 @@ public class CandidateOperationController {
 	@DeleteMapping("/delete/{id}")
 	public ResponseEntity<String> deleteCandidate(@PathVariable("id") Long id){
 		candService.deleteCandidate(id);
-		return new ResponseEntity<>("Candidate with :: "+id +" deleted",HttpStatus.OK);
+		return new ResponseEntity<>("Candidate with :: "+id +" deleted successfully",HttpStatus.OK);
 	}
 	
 	

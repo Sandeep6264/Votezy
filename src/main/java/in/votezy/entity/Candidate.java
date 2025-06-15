@@ -21,7 +21,7 @@ public class Candidate {
 	@NotBlank(message="Name is required")
 	private String name;
 	@NotBlank(message="Party is required")
-	private String patry;
+	private String party;
 	private Integer voteCount=0;
 	@OneToMany(mappedBy="candidate",cascade=CascadeType.ALL)
 	@JsonIgnore

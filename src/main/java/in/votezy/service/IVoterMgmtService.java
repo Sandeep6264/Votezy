@@ -10,4 +10,5 @@ public interface IVoterMgmtService {
 		public Voter getVoterById(Long id);
 		public Voter updateVoter(Long id,Voter updateVoter);
 		public void deleteVoter(Long id);
+	
 }

@@ -36,8 +36,8 @@ public class CandidateMgmtServiceImpl implements ICandidateMgmtService {
 		Candidate candidate=candRepo.findById(id).orElseThrow(()-> new ResourceNotFoundException("Candidate with id :: "+id +" Not Found"));
 		if(updateCandidate.getName()!=null)
 			candidate.setName(updateCandidate.getName());
-		if(updateCandidate.getPatry()!=null)
-			candidate.setPatry(updateCandidate.getPatry());
+		if(updateCandidate.getParty()!=null)
+			candidate.setParty(updateCandidate.getParty());
 		return candRepo.save(candidate);
 	}
 	@Override
